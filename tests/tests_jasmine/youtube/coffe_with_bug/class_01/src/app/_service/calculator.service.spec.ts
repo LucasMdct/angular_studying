@@ -8,8 +8,14 @@ describe('CalculatorService', () => {
 
   // TODO To avoid repeating so much code within the functions, we use the before each
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(CalculatorService);
+    // configures a test module. It's like setting up a “mini Angular” just for testing.
+    TestBed.configureTestingModule({
+      providers: [CalculatorService],
+      // you are saying:
+      // “In this test environment, I want to make the CalculatorService
+      //  service available.”
+    });
+    service = TestBed.inject(CalculatorService); // getting a calculator service instance
   });
 
 
@@ -23,13 +29,5 @@ describe('CalculatorService', () => {
     // service = TestBed.inject(CalculatorService);
     expect(service).toBeTruthy();
   });
-
-
-  it('should be created', () => {
-    //  TestBed.configureTestingModule({});
-    // service = TestBed.inject(CalculatorService);
-    expect(service).toBeTruthy();
-  });
-
 
 });
