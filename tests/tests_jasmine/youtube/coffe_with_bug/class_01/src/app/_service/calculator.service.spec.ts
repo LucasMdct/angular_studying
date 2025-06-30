@@ -7,21 +7,29 @@ describe('CalculatorService', () => {
   let service: CalculatorService;
 
   // TODO To avoid repeating so much code within the functions, we use the before each
-  // beforeEach(() => {
-  //   TestBed.configureTestingModule({});
-  //   service = TestBed.inject(CalculadoraService);
-  // });
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(CalculatorService);
+  });
+
+
+  //TODO this is executed after each test
+  //  afterEach(() => {
+
+  // })
 
   it('should be created', () => {
-     TestBed.configureTestingModule({});
-    service = TestBed.inject(CalculatorService);
+    //  TestBed.configureTestingModule({});
+    // service = TestBed.inject(CalculatorService);
     expect(service).toBeTruthy();
   });
 
 
   it('should be created', () => {
-     TestBed.configureTestingModule({});
-    service = TestBed.inject(CalculatorService);
+    //  TestBed.configureTestingModule({});
+    // service = TestBed.inject(CalculatorService);
     expect(service).toBeTruthy();
   });
+
+
 });
