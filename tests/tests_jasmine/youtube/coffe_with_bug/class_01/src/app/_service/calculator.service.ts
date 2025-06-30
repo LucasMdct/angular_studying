@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
+import { LoggerService } from './logger.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CalculatorService {
 
-  constructor() { }
+  constructor(
+    private loggerService: LoggerService
+  ) { }
 
   calc(num1:number ,num2: number, operation: string){
     switch(operation) {
@@ -18,6 +21,7 @@ export class CalculatorService {
       case 'sub':
         return num1 - num2;
       default:
+        this.loggerService.log('Non-existent operation')
         return null;
     }
   }
